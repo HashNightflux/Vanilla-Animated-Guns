@@ -1,0 +1,15 @@
+{
+    "vag:model": {
+        "origin": [8.0, 8.5323, 9.47]
+    },
+    "vag:scope": {
+        "camera": [8.0, 9.625, 20.0],
+        "viewportFov": 9.0,
+        "sightAnimation": {
+            "viewportCurve": "ease_out_cubic",
+            "sightCurve": "ease_out_quad",
+            "fovCurve": "ease_out_quad",
+            "aimTransformCurve": "ease_in_quad"
+        }
+    }
+}

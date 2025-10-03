@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+    "pattern": [
+        " N ",
+        "#Ci",
+        "L  "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:nether_star"
+        },
+        "i": {
+            "item": "minecraft:netherite_ingot"
+        },
+        "N": {
+            "item": "minecraft:iron_nugget"
+        },
+        "C": {
+            "item": "vag:boltcaster"
+        },
+        "L": {
+            "tag": "minecraft:logs"
+        }
+    },
+    "result": {
+    "item": "vag:dynamite_launcher"
+  }
+}

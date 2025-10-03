@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+    "pattern": [
+        "#  ",
+        "DMI",
+        "LT "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:lever"
+        },
+        "D": {
+            "item": "minecraft:diamond"
+        },
+        "I": {
+            "item": "minecraft:iron_block"
+        },
+        "L": {
+            "tag": "minecraft:logs"
+        },
+        "T": {
+            "item": "minecraft:tripwire_hook"
+        },
+        "M": {
+            "item": "vag:musket"
+        }
+    },
+    "result": {
+    "item": "vag:sidehammer",
+    "nbt": "{Attachments:{Stock:{id:\"vag:weighted_stock\",Count:1}}}"
+  }
+}

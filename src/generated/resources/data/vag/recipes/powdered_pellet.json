@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+        "###",
+        " G ",
+        " P "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:iron_nugget"
+        },
+        "G": {
+            "item": "minecraft:gunpowder"
+        },
+        "P": {
+            "item": "minecraft:paper"
+        }
+    },
+    "result": {
+    "count": 3,
+    "item": "vag:powdered_pellet"
+  }
+}

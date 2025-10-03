@@ -1,0 +1,47 @@
+{
+  "display": {
+    "flash": {
+      "size": 0.75,
+      "yOffset": 3.5,
+      "zOffset": -3.8
+    }
+  },
+  "general": {
+    "gripType": "vag:two_handed",
+    "maxAmmo": 1,
+    "rate": 40,
+    "recoilAngle": 10.0,
+    "recoilDurationOffset": 0.25,
+    "recoilKick": 2.0
+  },
+  "modules": {
+    "attachments": {
+      "scope": {
+        "yOffset": 5.2,
+        "zOffset": 2.7
+      },
+      "stock": {
+        "yOffset": 3.6,
+        "zOffset": 8.2
+      }
+    },
+    "zoom": {
+      "fovModifier": 0.6,
+      "yOffset": 5.7,
+      "zOffset": 3.0
+    }
+  },
+  "projectile": {
+    "damage": 15.0,
+    "gravity": true,
+    "item": "vag:dynamite",
+    "life": 50,
+    "size": 0.2,
+    "speed": 1.5,
+    "visible": true
+  },
+  "sounds": {
+    "fire": "vag:item.dynamite_launcher.fire",
+    "reload": "vag:item.handcannon.reload"
+  }
+}

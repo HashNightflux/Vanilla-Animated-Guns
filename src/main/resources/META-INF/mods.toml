@@ -1,0 +1,54 @@
+modLoader="javafml"
+loaderVersion="[39,)"
+license="GNU GPL3.0 (Code) / CC BY-NC-ND 4.0 (Assets)"
+
+[[mods]]
+modId="vag"
+version="1.0.0"
+displayName="Vanilla Animated Guns"
+logoFile="banner.png"
+authors="HashNightflux"
+credits="MrCrayfish"
+description="Stylized and fantasy magical firearms made to fit seamlessly into the Minecraft gameplay and style whilist keeping the core of what makes a gun mod fun!"
+
+[[dependencies.vag]]
+    modId="forge"
+    mandatory=true
+    versionRange="[44.1.0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.vag]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.19.4,1.20)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.vag]]
+    modId="framework"
+    mandatory=true
+    versionRange="[0.6.16,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.vag]]
+    modId="controllable"
+    mandatory=false
+    versionRange="[0.16.3,)"
+    ordering="AFTER"
+    side="CLIENT"
+[[dependencies.vag]]
+    modId="backpacked"
+    mandatory=false
+    versionRange="[2.1.9,)"
+    ordering="AFTER"
+    side="BOTH"
+[[dependencies.vag]]
+    modId="jei"
+    mandatory=false
+    versionRange="[12.1.1,)"
+    ordering="AFTER"
+    side="CLIENT"
+
+[modproperties.vag]
+    catalogueImageIcon="vag_icon.png"
+    catalogueBackground="vag_background.png"
+    configuredBackground="minecraft:textures/block/dirt.png"

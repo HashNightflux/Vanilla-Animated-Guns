@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+    "pattern": [
+        "#  ",
+        "NCi",
+        "LS "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:comparator"
+        },
+        "i": {
+            "item": "minecraft:iron_ingot"
+        },
+        "N": {
+            "item": "minecraft:netherite_block"
+        },
+        "C": {
+            "item": "minecraft:crossbow"
+        },
+        "L": {
+            "tag": "minecraft:logs"
+        },
+        "S": {
+            "item": "minecraft:shulker_shell"
+        }
+    },
+    "result": {
+    "item": "vag:boltcaster"
+  }
+}

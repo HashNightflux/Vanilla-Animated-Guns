@@ -1,0 +1,56 @@
+{
+  "display": {
+    "flash": {
+      "yOffset": 3.6505,
+      "zOffset": -3.81
+    }
+  },
+  "general": {
+    "alwaysSpread": true,
+    "gripType": "vag:two_handed",
+    "maxAmmo": 2,
+    "projectileAmount": 6,
+    "rate": 8,
+    "recoilAdsReduction": 0.4,
+    "recoilAngle": 8.0,
+    "recoilKick": 3.8,
+    "reloadAmount": 1,
+    "spread": 4.0
+  },
+  "modules": {
+    "attachments": {
+      "barrel": {
+        "scale": 0.5,
+        "yOffset": 3.6506,
+        "zOffset": -3.8
+      },
+      "scope": {
+        "yOffset": 4.4,
+        "zOffset": 4.0
+      },
+      "stock": {
+        "yOffset": 3.6506,
+        "zOffset": 8.4
+      }
+    },
+    "zoom": {
+      "fovModifier": 0.7,
+      "yOffset": 5.1,
+      "zOffset": 3.2
+    }
+  },
+  "projectile": {
+    "damage": 9.5,
+    "item": "vag:shell",
+    "life": 5,
+    "size": 1.0,
+    "speed": 10.0
+  },
+  "sounds": {
+    "cock": "vag:item.boomstick.cock",
+    "enchantedFire": "vag:item.boomstick.enchanted_fire",
+    "fire": "vag:item.boomstick.fire",
+    "reload": "vag:item.handcannon.reload",
+    "silencedFire": "vag:item.boomstick.silenced_fire"
+  }
+}

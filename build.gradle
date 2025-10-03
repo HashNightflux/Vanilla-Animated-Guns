@@ -1,0 +1,133 @@
+plugins {
+    id 'eclipse'
+    id 'maven-publish'
+    id 'net.minecraftforge.gradle' version '5.1.+'
+    id 'org.spongepowered.mixin' version '0.7.+'
+}
+
+archivesBaseName = "vag"
+version = "1.0.0-1.19.4"
+group = "com.hashnightflux"
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+sourceSets.main.resources { srcDir 'src/generated/resources' }
+
+mixin {
+    add sourceSets.main, "vag.refmap.json"
+    config 'vag.mixins.json'
+}
+
+minecraft {
+    mappings channel: 'official', version: '1.19.4'
+
+    runs {
+        client {
+            workingDirectory project.file('run')
+            property 'mixin.env.disableRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+            property 'forge.logging.console.level', 'debug'
+            mods {
+                vag {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        server {
+            workingDirectory project.file('run')
+            property 'mixin.env.disableRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+            property 'forge.logging.console.level', 'debug'
+            arg '-mixin.config=vag.mixins.json'
+            mods {
+                vag {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        data {
+            workingDirectory project.file('run')
+            property 'mixin.env.disableRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+            property 'forge.logging.console.level', 'debug'
+            args '--mod', 'vag', '--all', '--output', file('src/generated/resources/')
+            arg '-mixin.config=vag.mixins.json'
+            mods {
+                vag {
+                    source sourceSets.main
+                }
+            }
+        }
+    }
+}
+
+//processResources {
+//    doLast {
+//        fileTree(dir: outputs.files.asPath, include: "**/*.json").each {
+//            File file -> file.text = JsonOutput.toJson(new JsonSlurper().parse(file))
+//        }
+//    }
+//}
+
+repositories {
+    mavenLocal()
+    maven {
+        url "https://www.cursemaven.com"
+    }
+    maven {
+        name = "ModMaven"
+        url = "https://modmaven.dev"
+    }
+}
+
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.19.4-45.1.0'
+    implementation fg.deobf('curse.maven:framework-549225:4718249')
+    implementation fg.deobf('curse.maven:configured-457570:4462894')
+    implementation fg.deobf('curse.maven:catalogue-459701:4496718')
+    implementation fg.deobf('curse.maven:backpacked-352835:4510383')
+    compileOnly fg.deobf('curse.maven:controllable-317269:4511169')
+    compileOnly fg.deobf("mezz.jei:jei-1.19.4-common-api:13.1.0.11")
+    compileOnly fg.deobf("mezz.jei:jei-1.19.4-forge-api:13.1.0.11")
+    runtimeOnly fg.deobf("mezz.jei:jei-1.19.4-forge:13.1.0.11")
+    annotationProcessor('org.spongepowered:mixin:0.8.5:processor')
+}
+
+jar {
+    manifest {
+        attributes([
+            "Specification-Title": "Vanilla Animated Guns",
+            "Specification-Vendor": "HashNightflux",
+            "Specification-Version": "1",
+            "Implementation-Title": "Vanilla Animated Guns",
+            "Implementation-Version": project.version,
+            "Implementation-Vendor" : "HashNightflux",
+            "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
+            "MixinConfigs": "vag.mixins.json"
+        ])
+    }
+}
+
+jar.finalizedBy('reobfJar')
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifact jar
+        }
+    }
+    repositories {
+        maven {
+            url "file:///X:/localmaven/mcmods"
+        }
+    }
+}
