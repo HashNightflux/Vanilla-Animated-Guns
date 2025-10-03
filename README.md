@@ -15,7 +15,6 @@ This mod does not have fancy workbenches, highly detailed models, out-of-place a
 
 And, as a fork of MrCrayfish's Gun Mod, this gun mod inherits much of the simplicity that comes with it. And whilst CGM is already Minecrafty enough, this mod strips it down to its very foundations in order to make it feel like a truly vanilla experience.
 
-Types of Ammunition
 
 In this mod, there are three types of ammunition:
 
@@ -24,7 +23,6 @@ Bolt: This is the second type of ammunition you may or may not use in this mod, 
 Shell: This is a special type of ammunition, made specifically for the Boomstick.
 Dynamite: Although considered a type of ammunition for the Dynamite Launcher, the dynamite sticks can also be used independently and thrown by hand, although it has a fuse time before it can explode. Unlike TNT, these sticks only affect entities, and do not grief blocks.
 
-List of Firearms
 
 Each firearm has its own class and purpose. Their descriptions are as follows:
 
